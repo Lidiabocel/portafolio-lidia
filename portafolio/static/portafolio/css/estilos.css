@@ -1,0 +1,337 @@
+/* COLORES Y TIPOGRAFÍA */
+
+:root {
+    --principal: #6F4E37;
+    --secundario: #EFE2D5;
+    --fondo: #FFF9F2;
+    --texto: #352820;
+    --acento: #8B5E3C;
+    --fuente: Arial, sans-serif;
+}
+
+
+/* ESTILOS GENERALES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 24px;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente);
+    line-height: 1.6;
+}
+
+h1 {
+    max-width: 700px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+p {
+    max-width: 600px;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 4px;
+}
+
+
+/* ENCABEZADO Y NAVEGACIÓN */
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--secundario);
+}
+
+.marca {
+    color: var(--texto);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.cabecera nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cabecera nav a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.cabecera nav a:hover {
+    text-decoration: underline;
+}
+
+/* En computadora, el botón del menú está oculto. */
+
+.boton-menu {
+    display: none;
+    padding: 8px 12px;
+    border: 1px solid var(--principal);
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* PÁGINA DE INICIO */
+
+.presentacion {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 20px 48px;
+    padding: 48px 0;
+}
+
+.presentacion > h1,
+.presentacion > p,
+.presentacion > .acciones {
+    grid-column: 1;
+}
+
+.foto-perfil {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    justify-self: center;
+    align-self: center;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin: 0;
+}
+
+
+/* BOTONES */
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: 1px solid var(--principal);
+    background-color: var(--principal);
+    color: var(--fondo);
+    font-family: var(--fuente);
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: var(--acento);
+}
+
+.boton-secundario {
+    background-color: var(--fondo);
+    color: var(--principal);
+}
+
+.boton-secundario:hover {
+    background-color: var(--secundario);
+}
+
+.boton:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+
+/* SOBRE MÍ */
+
+.sobre-mi {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.sobre-mi p {
+    max-width: 100%;
+}
+
+.sobre-mi h2 {
+    margin-top: 32px;
+}
+
+/* HABILIDADES */
+
+.habilidades {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+
+/* PROYECTOS */
+
+.proyectos {
+    padding: 48px 0;
+}
+
+.lista-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.tarjeta-proyecto {
+    border: 1px solid var(--secundario);
+}
+
+.imagen-proyecto {
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secundario);
+    color: var(--acento);
+}
+
+.contenido-proyecto {
+    padding: 24px;
+}
+
+
+/* CONTACTO */
+
+.contacto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+#formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 550px;
+    margin-top: 32px;
+}
+
+#formulario-contacto label {
+    font-weight: bold;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--acento);
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente);
+    font-size: 16px;
+}
+
+#formulario-contacto textarea {
+    resize: vertical;
+}
+
+#formulario-contacto .boton {
+    margin-top: 12px;
+}
+
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    padding-top: 24px;
+    border-top: 1px solid var(--secundario);
+}
+
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 768px) {
+    .boton-menu {
+        display: block;
+    }
+
+    .cabecera nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .cabecera nav.abierto {
+        display: flex;
+    }
+
+    .cabecera nav a {
+        padding: 8px 0;
+    }
+
+    .presentacion {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .foto-perfil {
+        grid-column: 1;
+        grid-row: 4;
+        max-width: 220px;
+    }
+
+    .acciones {
+        grid-row: 5;
+        flex-direction: column;
+    }
+
+    .boton {
+        width: 100%;
+    }
+
+    .lista-proyectos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.captura-proyecto {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: var(--secundario);
+}

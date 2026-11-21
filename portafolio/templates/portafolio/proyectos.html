@@ -1,0 +1,137 @@
+{% extends 'portafolio/base.html' %}
+{% load static %}
+
+{% block titulo %}Proyectos | Lidia{% endblock %}
+
+{% block contenido %}
+<section class="proyectos">
+    <h1>{{ titulo }}</h1>
+
+    <p>
+        Aquí compartiré los ejercicios y proyectos
+        que realice durante mi formación.
+    </p>
+
+    <div class="filtros">
+        <button type="button" data-filtro="todos">
+            Todos
+        </button>
+
+        <button type="button" data-filtro="html">
+            HTML
+        </button>
+
+        <button type="button" data-filtro="css">
+            CSS
+        </button>
+
+        <button type="button" data-filtro="javascript">
+            JavaScript
+        </button>
+        <button type="button" data-filtro="android">
+    Android
+</button>
+    </div>
+
+    <div class="lista-proyectos">
+
+        <article
+    class="tarjeta-proyecto"
+    data-tecnologias="html css javascript python django"
+>
+    <img
+    class="captura-proyecto"
+    src="{% static 'portafolio/img/portafolio.png' %}"
+    alt="Página de inicio del portafolio de Lidia"
+>
+
+    <div class="contenido-proyecto">
+        <h2>Portafolio personal</h2>
+
+        <p><strong>Estado:</strong> en desarrollo</p>
+
+        <p>
+            Sitio web donde presento mi formación, habilidades
+            y proyectos. Incluye navegación para celular,
+            validación del formulario de contacto y filtros
+            de proyectos.
+        </p>
+
+        <p>
+            <strong>Tecnologías:</strong>
+            HTML, CSS, JavaScript, Python y Django.
+        </p>
+
+        
+    </div>
+</article>
+
+        <article
+    class="tarjeta-proyecto"
+    data-tecnologias="html css javascript"
+>
+    <img
+    class="captura-proyecto"
+    src="{% static 'portafolio/img/formacion-digital.png' %}"
+    alt="Página de Formación Digital con información sobre salud, bienestar y cursos"
+>
+
+    <div class="contenido-proyecto">
+        <h2>Formación Digital</h2>
+
+        <p>
+            Página sobre salud y bienestar, dirigida principalmente
+            a mujeres adultas y jóvenes. Presenta cuatro cursos
+            con opciones de inscripción y contenido en español
+            y kaqchikel.
+        </p>
+
+        <p>
+            <p>
+    <strong>Tecnologías:</strong> HTML, CSS y JavaScript.
+</p>
+
+<p>
+    <strong>Herramienta de diseño:</strong> Canva.
+</p>
+        </p>
+
+        
+    </div>
+</article>
+
+        <article
+    class="tarjeta-proyecto"
+    data-tecnologias="android"
+>
+    <img
+    class="captura-proyecto"
+    src="{% static 'portafolio/img/inventario-maquillaje.png' %}"
+    alt="Pantalla de la aplicación de inventario de maquillaje"
+>
+
+    <div class="contenido-proyecto">
+        <h2>Inventario de maquillaje</h2>
+
+        <p>
+            Aplicación móvil para consultar las existencias
+            de productos de maquillaje y visualizarlos
+            por catálogos.
+        </p>
+
+        <p>
+            <strong>Plataforma:</strong> Android.
+        </p>
+
+        <p>
+            <strong>Herramienta de desarrollo:</strong>
+            Android Studio.
+        </p>
+
+      
+    </div>
+</article>
+
+    </div>
+</section>
+{% endblock %}

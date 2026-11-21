@@ -1,0 +1,51 @@
+{% extends 'portafolio/base.html' %}
+
+{% block titulo %}Contacto | Lidia{% endblock %}
+
+{% block contenido %}
+<section class="contacto">
+    <form id="formulario-contacto" novalidate>
+    <label for="nombre">Nombre</label>
+    <input
+        type="text"
+        id="nombre"
+        autocomplete="name"
+        required
+    >
+
+    <label for="correo">Correo electrónico</label>
+    <input
+        type="email"
+        id="correo"
+        autocomplete="email"
+        required
+    >
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" rows="5" required></textarea>
+
+    <button
+        type="submit"
+        class="boton"
+        id="validar-contacto"
+        disabled
+    >
+        Validar mensaje
+    </button>
+
+    <p id="respuesta-formulario" role="status"></p>
+</form>
+<h2>Mis redes sociales</h2>
+
+<p>
+    <a
+        href="https://www.instagram.com/lidia.bocel/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="boton boton-secundario"
+    >
+        Instagram: @lidia.bocel
+    </a>
+</p>
+</section>
+{% endblock %}
