@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Portafolio de Lidia{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="{% static 'portafolio/css/estilos.css' %}">
+    <script src="{% static 'portafolio/js/main.js' %}" defer></script>
+</head>
+<body>
+    <header class="cabecera">
+    <a class="marca" href="{% url 'inicio' %}">
+        Portafolio personal
+    </a>
+
+<button
+    type="button"
+    class="boton-menu"
+    aria-controls="menu-principal"
+    aria-expanded="false"
+>
+    ☰ Menú
+</button>
+
+    <nav id="menu-principal" aria-label="Navegación principal">
+    <a href="{% url 'inicio' %}">Inicio</a>
+    <a href="{% url 'sobre_mi' %}">Sobre mí</a>
+    <a href="{% url 'habilidades' %}">Habilidades</a>
+    <a href="{% url 'proyectos' %}">Proyectos</a>
+    <a href="{% url 'contacto' %}">Contacto</a>
+</nav>
+</header>
+
+    <main>
+        {% block contenido %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Lidia Roxana Tuy Bocel</p>
+    </footer>
+</body>
+</html>

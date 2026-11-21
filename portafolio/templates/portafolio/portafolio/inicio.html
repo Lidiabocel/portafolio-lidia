@@ -1,0 +1,31 @@
+{% extends 'portafolio/base.html' %}
+{% load static %}
+
+{% block contenido %}
+<section class="presentacion">
+    <h1>Hola, soy {{ nombre }}</h1>
+
+    <p>
+        Soy estudiante del Técnico Universitario en Informática
+        en la Universidad del Valle de Guatemala.
+    </p>
+
+    <p>
+        Estoy aprendiendo a crear páginas web con HTML, CSS y JavaScript.
+    </p>
+
+    <img
+        class="foto-perfil"
+        src="{% static 'portafolio/img/perfil.jpg' %}"
+        alt="Foto de Lidia Roxana Tuy Bocel"
+    >
+
+    <div class="acciones">
+        <a href="{% url 'proyectos' %}" class="boton">
+    Ver proyectos </a>
+
+        <a href="{% url 'contacto' %}" class="boton boton-secundario">
+    Contactarme</a>
+    </div>
+</section>
+{% endblock %}

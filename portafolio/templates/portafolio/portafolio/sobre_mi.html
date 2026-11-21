@@ -1,0 +1,38 @@
+{% extends 'portafolio/base.html' %}
+
+{% block titulo %}Sobre mí | Lidia{% endblock %}
+
+{% block contenido %}
+<section class="sobre-mi">
+    <h1>Sobre mí</h1>
+
+    <p>
+        Soy Lidia Roxana Tuy Bocel y estudio en la
+        Universidad del Valle de Guatemala.
+    </p>
+
+    <p>
+        Durante mi formación he adquirido conocimientos de
+        HTML, CSS y JavaScript. También estoy comenzando
+        a aprender Python y Django.
+    </p>
+
+    <h2>Mi formación</h2>
+
+    <p>{{ formacion }}</p>
+
+    <p>
+        Universidad del Valle de Guatemala.
+        Actualmente en curso.
+    </p>
+
+    <h2>Mis intereses</h2>
+
+<p>
+    Me interesa el diseño y desarrollo de páginas web, así como
+    la creación de aplicaciones útiles para las personas.
+    Quiero seguir aprendiendo programación, mejorar mis
+    habilidades y aplicar mis conocimientos en nuevos proyectos.
+</p>
+</section>
+{% endblock %}
